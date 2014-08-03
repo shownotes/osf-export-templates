@@ -4,6 +4,9 @@ all accept a special format of shownotes which is documented below. There are
 handlebar-libs available for many languages, including [php](https://github.com/mardix/Handlebars), [python](https://github.com/wbond/pybars) and
 [javascript](http://handlebarsjs.com/) of course.
 
+## Distribution
+This repository is published to both npm and bower as `osf-export-templates`.
+
 ## Structure
 Each format is contained in its own directory. The name of the directory is also the
 primary name of the format. Each directory must contain a `main.hbs` which will be
