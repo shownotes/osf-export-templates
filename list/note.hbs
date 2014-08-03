@@ -1,0 +1,10 @@
+{{#if tags.chapter}}
+  </ul><h1>{{time}} {{text}}</h1><ul>
+{{/if}}
+
+{{#unless tags.chapter}}
+  <li>
+    {{text}}
+    <ul>{{#notes}}{{>note}}{{/notes}}</ul>
+  </li>
+{{/unless}}

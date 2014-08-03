@@ -1,0 +1,8 @@
+{{#if tags.chapter}}
+## {{{text}}} ```{{time}}```
+{{/if~}}
+
+{{#unless tags.chapter~}}
+  {{space depth}}* {{{text}}}
+  {{#notes}}{{>note}}{{/notes~}}
+{{/unless}}
