@@ -61,3 +61,7 @@ Tags are represented by a object whose keys are the tag-names which a truthy val
 
 ### `depth`
 The current nesting level, as a number, starting at `0` is present in `depth`.
+
+### `notes`
+Contains all sub-notes of the current note. This attribute must always be present. If
+there are no sub-notes it must be an empty array.
