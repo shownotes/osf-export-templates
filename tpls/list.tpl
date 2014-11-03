@@ -1,19 +1,19 @@
-{% macro shownote(note) %}
+{% macro shownote(note, top) %}
 
 {% if 'chapter' in note.tags %}
-  <h2><span>{{note.timestamp}}</span> {{note.title}}</h2>
+  <h2><span>{{note.timestamp | htime}}</span> {{note.title}}</h2>
 {% else %}
   {% if note.url %}
-    <a href="{{note.url}}" data-tooltip="{{note.timestamp}}">{{note.title}}</a>
+    <a href="{{note.url}}" data-tooltip="{{note.timestamp | htime}}">{{note.title}}</a>
   {% else %}
-    <span data-tooltip="{{note.timestamp}}">{{note.title}}</span>
+    <span data-tooltip="{{note.timestamp | htime}}">{{note.title}}</span>
   {% endif %}
 {% endif %}
 
 <ul>
 {% for subnote in note.shownotes %}
   <li>
-    {{ shownote(subnote) }}
+    {{ shownote(subnote, false) }}
   </li>
 {% endfor %}
 </ul>
@@ -21,7 +21,9 @@
 {% endmacro %}
 
 <div class="document-list">
-  {% for note in shownotes %}
-    {{ shownote(note, true) }}
-  {% endfor %}
+
+{% for note in shownotes %}
+  {{ shownote(note, true) }}
+{% endfor %}
+
 </div>

@@ -20,7 +20,7 @@ HEADER
 /HEADER
 
 {% macro shownote(note) -%}
-  {{note.timestamp}} {{note.title}}
+  {{note.timestamp | htime}} {{note.title}}
   {%- if note.url %} <{{note.url}}> {%- endif -%}
   {%- for tag in note.tags %} #{{ tag }} {%- endfor -%}
 
