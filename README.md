@@ -1,12 +1,14 @@
 
 todo:
-* audacity
-* block
-* list
-* chapters
-* markdown
-* reaper
+* human times
+* formats
+  * audacity
+  * block
+  * list: tags missing
+  * chapters
+  * markdown
+  * reaper
 
 done:
-* osf
+* osf: anti escaping
 
