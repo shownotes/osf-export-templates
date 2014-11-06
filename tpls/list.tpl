@@ -1,4 +1,4 @@
-{% macro shownote(note, top) %}
+{% macro shownote(note) %}
 
 {% if 'chapter' in note.tags %}
   <h2><span>{{note.timestamp | htime}}</span> {{note.title}}</h2>
@@ -13,7 +13,7 @@
 <ul>
 {% for subnote in note.shownotes %}
   <li>
-    {{ shownote(subnote, false) }}
+    {{ shownote(subnote) }}
   </li>
 {% endfor %}
 </ul>
@@ -23,7 +23,7 @@
 <div class="document-list">
 
 {% for note in shownotes %}
-  {{ shownote(note, true) }}
+  {{ shownote(note) }}
 {% endfor %}
 
 </div>
