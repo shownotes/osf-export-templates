@@ -3,7 +3,7 @@
 {%- if 'chapter' in note.tags %}
 ## {{note.title | safe}} {% if note.timestamp %}```{{note.timestamp | htime}}```{% endif %}
 {%- else -%}
-  {{ "* "|indent((note.level + 1) * 2, true)|replace("\n", "")|replace("  ", "", 1) }}
+  {{ "* "|indent((note.level + 1) * 2, true)|replace("\n", "")|replace("    ", "", 1) }}
   {%- if note.url -%}
     [{{note.title | safe}}]({{note.url}})
   {%- else -%}
