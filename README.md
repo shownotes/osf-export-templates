@@ -6,7 +6,3 @@ todo:
   * block
   * list: tags missing
   * markdown
-
-done:
-* osf: anti escaping
-
