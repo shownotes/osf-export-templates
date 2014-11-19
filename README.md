@@ -5,7 +5,6 @@ todo:
   * audacity
   * block
   * list: tags missing
-  * chapters
   * markdown
   * reaper
 
