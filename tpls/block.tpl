@@ -23,7 +23,7 @@
     {{ shownote(subnote) }}
 {% endfor %}
   
-{% if 'chapter' in note.tags %}</dl>{% endif %}
+{% if 'chapter' in note.tags %}</dd></dl>{% endif %}
 
 {% endmacro %}
 
