@@ -20,6 +20,8 @@ HEADER
 /HEADER
 
 {% macro shownote(note) -%}
+  {%- if 'chapter' in note.tags %}
+{% endif -%}
   {% if note.timestamp %}{{note.timestamp | htime}} {% endif -%} {{note.title | safe}}
   {%- if note.url %} <{{note.url}}> {%- endif -%}
   {%- for tag in note.tags %} #{{ tag }} {%- endfor -%}
