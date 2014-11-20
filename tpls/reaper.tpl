@@ -4,7 +4,7 @@ M0,"{{note.title | replace("\"", "\"\"") | safe}};{{note.url}};
 {%- for subnote in note.shownotes -%}
   {{ shownote(subnote) }}
 {%- endfor -%}
-,{{note.timestamp | htime}},,,
+,{{note.timestamp | htime(true)}},,,
 {% endmacro %}
 
 {%- for note in shownotes -%}
