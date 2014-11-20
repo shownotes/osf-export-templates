@@ -8,7 +8,7 @@ M0,"{{note.title | replace("\"", "\"\"") | safe}};{{note.url}};
 {% endmacro %}
 
 {%- for note in shownotes -%}
-  {%- if note.timestamp -%}
+  {%- if note.timestamp != null -%}
     {{ shownote(note) }}
   {%- endif -%}
 {%- endfor -%}

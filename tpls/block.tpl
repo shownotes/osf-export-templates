@@ -6,7 +6,7 @@
     <dd>
       <h2>{{note.title}}</h2>
 {% else %}
-  {% if note.timestamp -%}
+  {% if note.timestamp != null -%}
   <span data-tooltip="{{note.timestamp | htime}}">
   {%- else -%}
   <span>
