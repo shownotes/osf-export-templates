@@ -20,20 +20,16 @@ HEADER
 /HEADER
 
 {% macro shownote(note) -%}
-  {%- if 'chapter' in note.tags %}
+  {%- if 'chapter' in note.tags %}{# line break #}
 {% endif -%}
   {% if note.timestamp != null %}{{note.timestamp | htime}} {% endif -%} {{note.title | safe}}
   {%- if note.url %} <{{note.url}}> {%- endif -%}
-  {%- for tag in note.tags %} #{{ tag }} {%- endfor -%}
-
-  {%- for subnote in note.shownotes -%}
+  {%- for tag in note.tags %} #{{ tag }} {%- endfor %}
+{% for subnote in note.shownotes -%}
     {{ shownote(subnote) }}
-  {% endfor %}
+  {%- endfor %}
 {%- endmacro %}
 
 {%- for note in shownotes -%}
   {{ shownote(note) }}
-{% endfor %}
-
-
-
+{%- endfor -%}
