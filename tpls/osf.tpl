@@ -27,7 +27,7 @@ HEADER
   {%- for tag in note.tags %} #{{ tag }} {%- endfor -%}
 
   {%- for subnote in note.shownotes -%}
-    shownote(subnote)
+    {{ shownote(subnote) }}
   {% endfor %}
 {%- endmacro %}
 
