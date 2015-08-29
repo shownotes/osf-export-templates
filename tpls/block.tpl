@@ -1,10 +1,11 @@
 {% macro shownote(note) %}
-	
+
 {% if 'chapter' in note.tags %}
   <dl>
     <dt>{{note.timestamp | htime}}</dt>
     <dd>
       <h2>{{note.title}}</h2>
+{% elif note.revision %}
 {% else %}
   {% if note.timestamp != null -%}
   <span data-tooltip="{{note.timestamp | htime}}">
@@ -22,9 +23,8 @@
 {% for subnote in note.shownotes %}
     {{ shownote(subnote) }}
 {% endfor %}
-  
-{% if 'chapter' in note.tags %}</dd></dl>{% endif %}
 
+{% if 'chapter' in note.tags %}</dd></dl>{% endif %}
 {% endmacro %}
 
 <div class="document-block">
@@ -32,6 +32,5 @@
 {% for note in shownotes %}
   {{ shownote(note) }}
 {% endfor %}
-
 </div>
 

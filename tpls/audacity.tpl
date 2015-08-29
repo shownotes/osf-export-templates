@@ -1,5 +1,5 @@
 {% macro shownote(note) -%}
-  {%- if note.timestamp != null -%}
+  {%- if note.timestamp != null and not note.revision -%}
     {{note.timestamp / 1000 | round(6)}}	{{note.timestamp / 1000 | round(6)}}	{{note.title|safe}}
     {%- if note.url %} <{{note.url}}>{% endif -%}
     {%- for tag in note.tags %} #{{tag}} {%- endfor %}

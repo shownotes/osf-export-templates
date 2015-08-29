@@ -1,5 +1,5 @@
 {% macro shownote(note) -%}
-  {%- if note.timestamp != null -%}
+  {%- if note.timestamp != null and not note.revision -%}
 M0,"{{note.title | replace("\"", "\"\"") | safe}};{{note.url}};
 {%- for tag in note.tags %} #{{tag}} {%- endfor %}",{{note.timestamp | htime(true)}},,,
 {% endif %}

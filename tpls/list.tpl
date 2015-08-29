@@ -2,6 +2,7 @@
 
 {% if 'chapter' in note.tags %}
   <h2><span>{{note.timestamp | htime}}</span> {{note.title}}</h2>
+{%- elif note.revision -%}
 {% else %}
   {% if note.url %}
     <a href="{{note.url}}" data-tooltip="{{note.timestamp | htime}}">{{note.title}}</a>

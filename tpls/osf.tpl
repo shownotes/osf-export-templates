@@ -20,7 +20,8 @@ HEADER
 /HEADER
 
 {% macro shownote(note) -%}
-  {%- if 'chapter' in note.tags %}{# line break #}
+{%- if 'chapter' in note.tags %}{# line break #}
+{% elif note.revision %}
 {% endif -%}
   {% if note.timestamp != null %}{{note.timestamp | htime}} {% endif -%} {{note.title | safe}}
   {%- if note.url %} <{{note.url}}> {%- endif -%}
