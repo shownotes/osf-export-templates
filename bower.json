@@ -1,9 +1,10 @@
 {
   "name": "osf-export-templates",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "https://github.com/shownotes/osf-export-templates",
   "authors": [
-    "luto <m@luto.at>"
+    "luto <m@luto.at>",
+    "Dr4k3 <Dr4k3@fastreboot.de>
   ],
   "license": "MIT",
   "ignore": [

@@ -1,6 +1,6 @@
 {
   "name": "osf-export-templates",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "",
   "homepage": "https://github.com/shownotes/osf-export-templates",
   "repository": {
@@ -8,5 +8,9 @@
     "url": "https://github.com/shownotes/osf-export-templates.git"
   },
   "author": "luto <m@luto.at>",
+  "contributors": [{
+    "name": "Dr4k3",
+    "email": "Dr4k3@fastreboot.de"
+}],
   "license": "MIT"
 }
